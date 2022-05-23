@@ -22,7 +22,7 @@ const BlogDetails = () => {
 
   const fetchDetails = async () => {
     const res = await axios
-      .get(`https://blog-first-application.herokuapp.com/${id}`)
+      .get(`https://blog-first-application.herokuapp.com/api/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -39,10 +39,13 @@ const BlogDetails = () => {
   });
   const sendRequest = async () => {
     const res = await axios
-      .put(`https://blog-first-application.herokuapp.com/update/${id}`, {
-        title: inputs.title,
-        description: inputs.description,
-      })
+      .put(
+        `https://blog-first-application.herokuapp.com/api/blog/update/${id}`,
+        {
+          title: inputs.title,
+          description: inputs.description,
+        }
+      )
       .catch((err) => console.log(err));
 
     const data = await res.data;

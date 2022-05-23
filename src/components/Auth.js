@@ -25,7 +25,7 @@ const Auth = () => {
 
   const sendRequest = async (type = "login") => {
     const res = await axiox
-      .post(`https://blog-first-application.herokuapp.com/${type}`, {
+      .post(`https://blog-first-application.herokuapp.com/api/user/${type}`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,

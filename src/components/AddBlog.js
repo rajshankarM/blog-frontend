@@ -22,7 +22,7 @@ const AddBlog = () => {
 
   const sendRequest = async () => {
     const res = await axios
-      .post("https://blog-first-application.herokuapp.com/add", {
+      .post("https://blog-first-application.herokuapp.com/api/blog/add", {
         title: inputs.title,
         description: inputs.description,
         image: inputs.imageURL,
