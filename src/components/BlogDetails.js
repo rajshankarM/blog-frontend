@@ -22,7 +22,7 @@ const BlogDetails = () => {
 
   const fetchDetails = async () => {
     const res = await axios
-      .get(`http://localhost:5000/api/blog/${id}`)
+      .get(`https://blog-first-application.herokuapp.com/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -39,7 +39,7 @@ const BlogDetails = () => {
   });
   const sendRequest = async () => {
     const res = await axios
-      .put(`http://localhost:5000/api/blog/update/${id}`, {
+      .put(`https://blog-first-application.herokuapp.com/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })
