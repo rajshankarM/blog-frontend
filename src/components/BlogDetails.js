@@ -36,7 +36,7 @@ const BlogDetails = () => {
         description: data.blog.description,
       });
     });
-  }, [id]);
+  });
   const sendRequest = async () => {
     const res = await axios
       .put(`http://localhost:5000/api/blog/update/${id}`, {
