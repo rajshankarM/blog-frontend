@@ -32,7 +32,6 @@ const Auth = () => {
       })
       .catch((err) => console.log(err));
     const data = await res.data;
-    console.log(data);
     return data;
   };
 
@@ -118,3 +117,5 @@ const Auth = () => {
 };
 
 export default Auth;
+
+//https://blog-first-application.herokuapp.com
